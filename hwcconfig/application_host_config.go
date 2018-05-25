@@ -751,6 +751,7 @@ const applicationHostConfigTemplate = `<?xml version="1.0" encoding="UTF-8"?>
       <mimeMap fileExtension=".wmx" mimeType="video/x-ms-wmx" />
       <mimeMap fileExtension=".wmz" mimeType="application/x-ms-wmz" />
       <mimeMap fileExtension=".woff" mimeType="font/x-woff" />
+      <mimeMap fileExtension=".woff2" mimeType="application/font-woff2" />
       <mimeMap fileExtension=".wps" mimeType="application/vnd.ms-works" />
       <mimeMap fileExtension=".wri" mimeType="application/x-mswrite" />
       <mimeMap fileExtension=".wrl" mimeType="x-world/x-vrml" />
