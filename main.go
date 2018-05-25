@@ -52,7 +52,7 @@ func main() {
 	checkErr(err)
 
 	contextPath := contextpath.Default()
-	if cfenv.IsRunningOnCF() {
+	if cfenv.IsRunningOnCF() && !multipleApps {
 		appEnv, err := cfenv.Current()
 		if err != nil {
 			checkErr(fmt.Errorf("Getting current CF environment: %v", err))

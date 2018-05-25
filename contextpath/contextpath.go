@@ -27,7 +27,7 @@ func appContextPath(appEnv *cfenv.App) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return Default(), nil
+	return contextPath, nil
 }
 
 func parseContextPath(applicationURI string) string {
@@ -36,4 +36,13 @@ func parseContextPath(applicationURI string) string {
 }
 
 func checkContextPathIsUnique(uniqueContextPaths map[string]bool) error {
+	if len(uniqueContextPaths) <= 1 {
+		return nil
+	}
+	var errParts []string
+	for contextPath := range uniqueContextPaths {
+		errParts = append(errParts, contextPath)
+	}
+	sort.Strings(errParts)
+	return fmt.Errorf("Application may not contain conflicting route paths: %s", strings.Join(errParts, ", "))
 }
