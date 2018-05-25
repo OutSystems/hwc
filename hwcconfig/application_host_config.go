@@ -793,6 +793,7 @@ const applicationHostConfigTemplate = `<?xml version="1.0" encoding="UTF-8"?>
       <mimeMap fileExtension=".xwd" mimeType="image/x-xwindowdump" />
       <mimeMap fileExtension=".z" mimeType="application/x-compress" />
       <mimeMap fileExtension=".zip" mimeType="application/x-zip-compressed" />
+      <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="30.00:00:00" />
     </staticContent>
 
     <tracing>
