@@ -245,6 +245,7 @@ const applicationHostConfigTemplate = `<?xml version="1.0" encoding="UTF-8"?>
 
     <httpCompression directory="{{.Config.IISCompressedFilesDirectory}}">
       <scheme name="gzip" dll="%Windir%\system32\inetsrv\gzip.dll" />
+      <scheme name="deflate" dll="%Windir%\system32\inetsrv\gzip.dll" />
       <staticTypes>
         <add mimeType="text/*" enabled="true" />
         <add mimeType="message/*" enabled="true" />
@@ -253,6 +254,9 @@ const applicationHostConfigTemplate = `<?xml version="1.0" encoding="UTF-8"?>
         <add mimeType="application/atom+xml" enabled="true" />
         <add mimeType="application/xaml+xml" enabled="true" />
         <add mimeType="*/*" enabled="false" />
+        <add mimeType="image/svg+xml" enabled="true" />
+        <add mimeType="application/rss+xml" enabled="true" />
+        <add mimeType="application/json" enabled="true" />
       </staticTypes>
       <dynamicTypes>
         <add mimeType="text/*" enabled="true" />
@@ -260,6 +264,10 @@ const applicationHostConfigTemplate = `<?xml version="1.0" encoding="UTF-8"?>
         <add mimeType="application/x-javascript" enabled="true" />
         <add mimeType="application/javascript" enabled="true" />
         <add mimeType="*/*" enabled="false" />
+        <add mimeType="application/atom+xml" enabled="true" />
+        <add mimeType="application/xaml+xml" enabled="true" />
+        <add mimeType="application/rss+xml" enabled="true" />
+        <add mimeType="application/json" enabled="true" />
       </dynamicTypes>
     </httpCompression>
 
