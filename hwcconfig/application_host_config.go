@@ -190,7 +190,7 @@ const applicationHostConfigTemplate = `<?xml version="1.0" encoding="UTF-8"?>
 
     <sites>
       <siteDefaults>
-        <logFile logFormat="W3C" directory="{{.Config.TempDirectory}}\LogFiles" />
+        <logFile logFormat="W3C" logExtFileFlags="Date, Time, ClientIP, UserName, ServerIP, Method, UriStem, UriQuery, Cookie, HttpStatus, Win32Status, TimeTaken, ServerPort, UserAgent, Referer, Host, HttpSubStatus" directory="{{.Config.TempDirectory}}\LogFiles" />
         <traceFailedRequestsLogging enabled="false" />
       </siteDefaults>
       <applicationDefaults applicationPool="AppPool{{.Config.Port}}" />
